@@ -32,4 +32,4 @@ elif len(sys.argv) == 2:
 elif len(sys.argv) == 3:
 	print(calendar.monthcalendar(int(sys.argv[2]), int(sys.argv[1])))
 else:
-	print('invalid argument')
+	print('invalid argument, please use format "MM YYYY"')
