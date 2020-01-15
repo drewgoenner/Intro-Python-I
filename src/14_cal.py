@@ -24,12 +24,13 @@ import calendar
 from datetime import datetime
 
 now = datetime.now()
+c = calendar.TextCalendar()
 
 if len(sys.argv) == 1:
-	print(calendar.monthcalendar(now.year, now.month))
+	print(c.formatmonth(now.year, now.month))
 elif len(sys.argv) == 2:
-	print(calendar.monthcalendar(now.year, int(sys.argv[1])))
+	print(c.formatmonth(now.year, int(sys.argv[1])))
 elif len(sys.argv) == 3:
-	print(calendar.monthcalendar(int(sys.argv[2]), int(sys.argv[1])))
+	print(c.formatmonth(int(sys.argv[2]), int(sys.argv[1])))
 else:
 	print('invalid argument, please use format "MM YYYY"')
